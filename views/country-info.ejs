@@ -1,0 +1,68 @@
+<%- include("header") -%>
+<body>
+
+  <div class="heading">
+    <div class="home-link">
+      <a href="/">Home</a>
+    </div>
+    <h1><%= name %></h1>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-6 info">
+        <img src="<%= flag %>" width="300px" height="150px">
+        <br><br><br>
+        <% if(capital != "") { %>
+          <div class="weatherInfo">
+            <ul class="list-group list-group-flush">
+
+              <li class="list-group-item list"><h4>Current weather: <%=cityName%></h4>
+                <form action="/country-info/<%=name%>" method="post">
+                  <input type="text" list="cities" name="cty" placeholder="Enter city name" autocomplete="off"></input>
+                  <datalist id="cities">
+                    <% citiesList.forEach(function(city) { %>
+                      <option value="<%=city%>"> <%= city %> </option>
+                    <% }); %>
+                  </datalist>
+                  <button type="submit" class="btn btn-secondary" name="button">Search</button>
+                </form>
+              </li>
+
+              <li class="list-group-item list">
+                <img src = <%= iconUrl %> > <h4> <%= description %> </h4> <img src = "/images/temperature.png"> <h4> <%= temp %></h4><h4> °Celcius </h4>
+              </li>
+
+            </ul>
+          </div>
+        <% } %>
+      </div>
+
+      <div class="col-lg-6 info">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list"><img src="/images/capital.png"> <h4><%= capital %></h4></li>
+          <li class="list-group-item list"><img src="/images/population.png"> <h4><%= population %> <%= demonym %> people</h4></li>
+          <li class="list-group-item list"><img src="/images/timezone.png">
+
+            <select id="utc">
+              <% for(let i=0; i<timezone.length; i++) { %>
+                <option> <%= timezone[i] %> <%= dateTimeArr[i] %></option>
+              <% } %>
+            </select>
+
+          </li>
+          <li class="list-group-item list"><img src="/images/money.png"> <h4><%= currency %> <%= currencyCode %> <%= currencySymbol %></h4></li>
+          <li class="list-group-item list"><img src="/images/area.png"> <h4><%= area %> sq km</h4></li>
+          <li class="list-group-item list"><img src="/images/language.png"> <h4><%= language %> (<%= nativeName %>)</h4></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+<%- include("footer") -%>

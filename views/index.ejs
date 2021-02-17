@@ -1,0 +1,57 @@
+<%- include("header") -%>
+<body>
+
+  <div class="heading">
+    <h1>Look up a country</h1>
+  </div>
+
+  <div class="search-bar">
+    <form action="/" method="post">
+      <input type="text" class="inp" list="countries" name="cName" placeholder="Enter country name" autocomplete="off"></input>
+      <datalist id="countries">
+        <% countryList.forEach(function(country) { %>
+          <option value="<%=country.name%>"> <%= country.name %> </option>
+        <% }); %>
+      </datalist>
+      <button type="submit" class="btn btn-secondary" name="button">Search</button>
+    </form>
+  </div>
+
+  <div class="card search-example" style="width: 15rem;">
+    <img src="https://restcountries.eu/data/ind.svg" class="card-img-top" width="300px" height="150px">
+    <div class="card-body">
+      <h5 class="card-title">India</h5>
+      <p class="card-text">Capital: New Delhi</p>
+      <a href="/country-info/India" class="btn btn-secondary">Read more</a>
+    </div>
+  </div>
+
+  <div class="card search-example" style="width: 15rem;">
+    <img src="https://restcountries.eu/data/usa.svg" class="card-img-top" width="300px" height="150px">
+    <div class="card-body">
+      <h5 class="card-title">U.S.A</h5>
+      <p class="card-text">Capital: Washington, D.C.</p>
+      <a href="/country-info/United States of America" class="btn btn-secondary">Read more</a>
+    </div>
+  </div>
+
+  <div class="card search-example" style="width: 15rem;">
+    <img src="https://restcountries.eu/data/fra.svg" class="card-img-top" width="300px" height="150px">
+    <div class="card-body">
+      <h5 class="card-title">France</h5>
+      <p class="card-text">Capital: Paris</p>
+      <a href="/country-info/France" class="btn btn-secondary">Read more</a>
+    </div>
+  </div>
+
+  <div class="card search-example" style="width: 15rem;">
+    <img src="https://restcountries.eu/data/chn.svg" class="card-img-top" width="300px" height="150px">
+    <div class="card-body">
+      <h5 class="card-title">China</h5>
+      <p class="card-text">Capital: Beijing</p>
+      <a href="/country-info/China" class="btn btn-secondary">Read more</a>
+    </div>
+  </div>
+
+</body>
+<%- include("footer") -%>

@@ -1,0 +1,45 @@
+body {
+  background-color: #eeeded;
+}
+
+h4 {
+  display: inline;
+  max-width: inherit;
+}
+
+#utc {
+  background-color: #f9e0ae;
+  font-size: 19px;
+}
+
+.list {
+  text-align: left;
+  background-color: #f9e0ae;
+}
+
+.heading {
+  text-align: center;
+  background-color: #f2a154;
+  padding: 20px 0px 20px 0px;
+}
+
+.search-bar {
+  text-align: center;
+  margin: 20px 0px 20px 0px;
+}
+
+.weatherInfo {
+  display: block;
+}
+
+.home-link {
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+}
+
+.search-example {
+  background-color: #f9e0ae;
+  display: inline-block;
+  margin: 100px 0 0 70px;
+}
