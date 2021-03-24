@@ -23,3 +23,9 @@ An app to look up information about countries and current weather data of any of
 - [Rest Countries](https://restcountries.eu/)
 - [Countries Now](https://countriesnow.space/api/v0.1/countries)
 - [Open weather map](https://api.openweathermap.org)
+
+---
+
+## Architecture diagram
+
+![architecture-diagram](./architecture-diagram.png)
