@@ -26,6 +26,6 @@ An app to look up information about countries and current weather data of any of
 
 ---
 
-## Architecture diagram
+## Architecture and process flow diagram
 
 ![architecture-diagram](./architecture-diagram.png)
